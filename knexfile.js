@@ -10,6 +10,6 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DATAVASE_URL,
+    connection: process.env.DATABASE_URL,
   },
 };
