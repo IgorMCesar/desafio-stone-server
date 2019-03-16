@@ -8,7 +8,6 @@ exports.seed = async function(knex, Promise) {
   
   // Insert seed entries
   return knex('funcionario').insert([{
-    id: 1,
     idade: 27,
     nome: 'Igor',
     cargo: 'Dev'

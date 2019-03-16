@@ -1,4 +1,5 @@
 module.exports = {
+  // Local connection to DB config
   development: {
     client: 'pg',
     connection: {
@@ -8,6 +9,7 @@ module.exports = {
       database: 'desafio-stone'
     }
   },
+  //Heroku connection to DB config
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
