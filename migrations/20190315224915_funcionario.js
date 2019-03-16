@@ -2,10 +2,10 @@
 exports.up = function(knex, Promise) {
   //  Id , Idade , Nome e Cargo
   return knex.schema.createTable('funcionario', (table) => {
-    table.increments('Id');
-    table.integer('Idade').notNullable();
-    table.text('Nome').notNullable();
-    table.text('Cargo').notNullable();
+    table.increments('id');
+    table.integer('idade').notNullable();
+    table.text('nome').notNullable();
+    table.text('cargo').notNullable();
   })
 };
 
