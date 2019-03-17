@@ -10,6 +10,6 @@ exports.seed = async function(knex, Promise) {
   return knex('funcionario').insert([{
     idade: 27,
     nome: 'Igor',
-    cargo: 'Dev'
+    cargo: 'Dev FullStack'
   }]);
 };

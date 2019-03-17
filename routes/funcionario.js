@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var funcionario = require('../queries/funcionario');
+var funcionario = require('../db/funcionario');
 
 //Route to get funcionario by id
 router.post('/findById', (req, res) => {

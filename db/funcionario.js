@@ -1,7 +1,7 @@
 const Joi = require('joi');
 const db = require('../db');
 
-// Schema of funcionario to verify if the object to be inserted on the DB follows
+// Schema of funcionario to./funcionarioto be inserted on the DB follows
 // the correct pattern 
 const funcionarioSchema = Joi.object().keys({
   idade: Joi.number().integer().min(0).max(120).required(),
