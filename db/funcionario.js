@@ -19,9 +19,7 @@ module.exports = {
   //Insert a new funcionario on the DB
   insert(funcionario) {
     const result = Joi.validate(funcionario, funcionarioSchema);
-    //Validates if the data on the obj funcionario is correct, if it is insert it on the DB
-    if( result.error == null) return db('funcionario').insert(funcionario);
-    // Returns the error if the pattern is not correct
+    if( result.error == null) return db('funcionario').returning('id').insert(funcionario);
     else return Promise.reject(result.error);
   },
 
@@ -32,7 +30,6 @@ module.exports = {
 
   //Query the DB for a funcionario with the specified id
   remove(id) {
-    console.log(id);
-    return db('funcionario').where('id', id).del();
+    return db('funcionario').where('id', id).returning(['nome','idade','cargo']).del();
   },
 }
