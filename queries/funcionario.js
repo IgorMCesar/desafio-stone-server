@@ -1,4 +1,4 @@
-const Joi = require('Joi');
+const Joi = require('joi');
 const db = require('../db');
 
 // Schema of funcionario to verify if the object to be inserted on the DB follows
