@@ -9,8 +9,14 @@ const funcionario = require('./routes/funcionario.js');
 
 var app = express();
 
-//CORS is needed, but since the app is not authenticated it doesnt needed setup
-app.use(cors());
+//Block browser access to this server with the wrong origin
+var corsOptions = {
+  origin: process.env.NODE_ENV ? 'https://desafio-stone.now.sh' : 'http://localhost:8080',
+  optionsSuccessStatus: 200
+}
+
+//Use cors with config
+app.use(cors(corsOptions));
 
 // EXPRESS INITIAL SETUP
 app.use(logger('dev'));
