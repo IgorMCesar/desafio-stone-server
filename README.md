@@ -16,7 +16,7 @@ development: {
   }
 },
 ```
-3. Run install knex globally 
+3. Install knex globally 
 ```sh
 npm i -g knex
 ```
