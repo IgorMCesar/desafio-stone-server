@@ -6,4 +6,9 @@ module.exports = {
   insert(log) {
     return db('log').insert(log);
   },
+
+  //Query the DB for all logs
+  getAll() {
+    return db('log');
+  },
 }

@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 const { notFound, errorHandler} = require('./middlewares');
 const funcionario = require('./routes/funcionario.js');
+const log = require('./routes/log.js');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.get('/', (req, res) => {
 
 //Use all routes from funcionario, so all routes inside here are /funcionario/~something~
 app.use('/funcionario', funcionario);
+app.use('/log', log);
 
 //If the route requested doesnt match with any route notFound is invoked
 app.use(notFound);
